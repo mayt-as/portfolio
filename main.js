@@ -2,6 +2,9 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import satyam from './images/satyam.svg';
+import space from './images/space.jpg';
+import moon from './images/moon.jpg';
+import normal from './images/normal.jpg';
 // Setup
 
 const scene = new THREE.Scene();
@@ -60,7 +63,7 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(space);
 scene.background = spaceTexture;
 
 // Avatar
@@ -73,8 +76,8 @@ scene.add(sat);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('images/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(moon);
+const normalTexture = new THREE.TextureLoader().load(normal);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
