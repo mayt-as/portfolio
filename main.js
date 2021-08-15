@@ -1,7 +1,7 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
+import satyam from './images/satyam.svg';
 // Setup
 
 const scene = new THREE.Scene();
@@ -65,7 +65,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const satTexture = new THREE.TextureLoader().load('images/satyam.svg');
+const satTexture = new THREE.TextureLoader().load(satyam);
 
 const sat = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: satTexture }));
 
