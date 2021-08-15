@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import satyam from './images/satyam.svg';
 import space from './images/space.jpg';
-import moon from './images/moon.jpg';
+import moondp from './images/moon.jpg';
 import normal from './images/normal.jpg';
 // Setup
 
@@ -76,7 +76,7 @@ scene.add(sat);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load(moon);
+const moonTexture = new THREE.TextureLoader().load(moondp);
 const normalTexture = new THREE.TextureLoader().load(normal);
 
 const moon = new THREE.Mesh(
